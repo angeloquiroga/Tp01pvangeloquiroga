@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cultura de suiza</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <header>
@@ -13,11 +13,24 @@
     <main>
         <section>
             <h2>Escríbenos tu mensaje</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aquí...">
+            <br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Escribe tu apellido aquí...">
+            <br>
             <textarea rows="5" cols="50" placeholder="Escribe tu mensaje aquí..."></textarea>
-            <button>Enviar</button>
+            <button onclick="mostrarAlerta()">Enviar</button>
         </section>
     </main>
     <footer>
         <p>&copy; 2025 Cultura de Suiza. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        function mostrarAlerta() {
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            alert(`Nombre: ${nombre}\nApellido: ${apellido}`);
+        }
+    </script>
 </body>
